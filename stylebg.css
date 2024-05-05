@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Moirai+One&family=Varela+Round&display=swap');
+
+html {
+  overflow-y: scroll; 
+}
+
+body {
+  overflow-y: scroll;
+}
+
+/* NAVIGATION*/
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 20px 10px;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 2em;
+  font-weight: 400;
+  font-family: 'Varela Round', cursive;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  nav a {
+    padding: 5px 10px;
+    font-size: 1.5em;
+  }
+}
+
+/* MAZE */
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #73e0ff;
+}
+
+#mazeContainer {
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  top: 40px;
+  opacity: 0;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
+
+#mazeContainer #mazeCanvas {
+  margin: 0;
+  display: block;
+  border: solid 1px black;
+}
+
+input,
+select {
+  transition-property: background-color opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 45px;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  appearance: none;
+}
+
+input:hover,
+select:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+input:active,
+select:active {
+  background-color: black;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.custom-select {
+  display: inline-block;
+}
+
+.custom-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/png; base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC");
+  background-repeat: no-repeat;
+  background-position: 125px center;
+}
+
+#Message-Container {
+  visibility: hidden;
+  color: white;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+#Message-Container #message {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+
+#page {
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+
+#page #menu {
+  margin: auto;
+  padding: 100px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+#page #menu h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+#page #view {
+  position: absolute;
+  top: 150px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.border {
+  border: 1px black solid;
+  border-radius: 8px;
+}
+
+
+@media only screen and (max-width: 400px) {
+  input,
+  select {
+    width: 120px;
+  }
+}
+
+/* FOOTER */
+
+p{
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 1em auto 0;
+  font-weight: 400;
+  font-family: 'Varela Round', cursive;
+}
+
+.footer-container{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFCD8;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+}
+
+
+/* TIMER */
+
+#timer {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 320px;
+  padding: 1em;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  font-family: 'Varela Round', cursive;
+  margin-left: 2.2em;
+  margin-top: -0.6em;
+}
+
+#instructions {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 420px;
+  padding: 1em;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  font-family: 'Varela Round', cursive;
+  margin-left: 3em;
+  margin-top: 2em;
+}
+
+strong {
+  font-size: 2em;
+}
+
+/* BACKGROUNDS
+
+.desert {
+    background-image: url(/images/orangebg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99%;
+}
+
+.forest {
+    background-image: url(/images/greenbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99%;
+}
+
+.space {
+    background-image: url(/images/darkbluebg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99%;
+}
+
+.ocean {
+    background-image: url(/images/bluebg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99%;
+} 
+
+@media only screen and (max-width: 400px) {
+    input,
+    select {
+        width: 120px;
+    }
+} */

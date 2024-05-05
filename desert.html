@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Masters - Desert</title>
+    <link rel="stylesheet" href="stylebg.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/f25ae91a93450053de225a967968324c.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/f25ae91a93450053de225a967968324c.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/f25ae91a93450053de225a967968324c.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/f25ae91a93450053de225a967968324c.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/f25ae91a93450053de225a967968324c.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/f25ae91a93450053de225a967968324c.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/f25ae91a93450053de225a967968324c.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/f25ae91a93450053de225a967968324c.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/f25ae91a93450053de225a967968324c.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/f25ae91a93450053de225a967968324c.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/f25ae91a93450053de225a967968324c.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/f25ae91a93450053de225a967968324c.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/f25ae91a93450053de225a967968324c.ico/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+
+  <body class="desert">
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="mazes.html">Mazes</a>
+      <a href="info.html">Info</a>
+    </nav>
+    
+    <div id="gradient"></div>
+	<div id="page">
+		<div id="Message-Container">
+			<div id="message">
+				<h1>Congratulations!</h1>
+				<p>OMG! You found the way Home!</p>
+				<p id="moves"></p>
+				<input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Play again" />
+			</div>
+		</div>
+		<div id="menu">
+			<div class="custom-select">
+				<select id="diffSelect">
+					<option value="25">Hard</option>
+				</select>
+			</div>
+			<input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start/Reset Maze"/>
+      <input id="startMazeBtn" type="button" onclick="startOrResetMaze(80)" value="Start/Reset Timer"/>
+		</div>
+
+		<div id="view">
+			<div id="mazeContainer">
+				<canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+        <br><br><br>
+			</div>
+		</div>
+	</div>
+
+  <div id="timer">Your time left: 80</div>
+    <div id="instructions"><strong>Instructions:</strong>
+      <ul>
+        <li>Click the Start/Reset Maze button to Start or Reset your Maze</li><br>
+        <li>Click the Start/Reset Timer button to reset your timer or start it if it is not running.</li><br>
+        <li>Use the arrow keys to move through the Maze and find your way Home.</li><br>
+        <li>Enjoy the journey, good luck, and avoid dead ends along the way.</li><br>
+      </ul>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <footer class="footer-container">
+      <p>© 2024 Maze Masters. All rights reserved. Siem van Bree.</p>
+    </footer>
+  </body>
+  </html>
